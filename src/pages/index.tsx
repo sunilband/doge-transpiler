@@ -1,5 +1,5 @@
 
-import Textbox from '../../components/Textbox'
+import Textbox from '../../components/Main'
 
 export default function Home() {
   return (
