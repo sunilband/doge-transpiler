@@ -73,14 +73,14 @@ const Textbox = () => {
       <div className="flex justify-center space-x-7 ">
       <button
           type="button"
-          className="text-blue-700 w-40 hover:text-white border border-blue-700 hover:bg-blue-800  focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800 hover:scale-110 transition-all ease-in-out duration-150 hover:border-cyan-600 tracking-wider hover:drop-shadow-xl  uppercase"
+          className="text-blue-700 w-40 min-w-40  hover:text-white border border-blue-700 hover:bg-blue-800  focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800 hover:scale-110 transition-all ease-in-out duration-150 hover:border-cyan-600 tracking-wider hover:drop-shadow-xl  uppercase"
           onClick={()=>{setDogeText(englishToCheems(input))}}
         >
           Translate
         </button>
         <button
           type="button"
-          className="text-blue-700 w-40 hover:text-white border border-blue-700 hover:bg-blue-800  focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800 hover:scale-110 transition-all ease-in-out duration-150 hover:border-cyan-600 tracking-wider hover:drop-shadow-xl  uppercase"
+          className="text-blue-700 w-40 min-w-40 hover:text-white border border-blue-700 hover:bg-blue-800  focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800 hover:scale-110 transition-all ease-in-out duration-150 hover:border-cyan-600 tracking-wider hover:drop-shadow-xl  uppercase"
           onClick={() => speak({ text: dogeText, voice, rate, pitch })}
           disabled={listening ? true : false}
         >
@@ -88,7 +88,7 @@ const Textbox = () => {
         </button>
         <button
           type="button"
-          className={`w-40 hover:text-white border ${listening?"bg-red-600  hover:bg-red-600 text-white dark:border-blue-500 dark:text-white dark:hover:text-white  dark:focus:ring-blue-800":"hover:bg-blue-800 dark:hover:bg-blue-500 text-blue-700 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white  dark:focus:ring-blue-800"} border-blue-700 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2  hover:scale-110 transition-all ease-in-out duration-150 hover:border-cyan-600 tracking-wider hover:drop-shadow-xl  uppercase`}
+          className={`w-40 min-w-40  hover:text-white border ${listening?"bg-red-600  hover:bg-red-600 text-white dark:border-blue-500 dark:text-white dark:hover:text-white  dark:focus:ring-blue-800":"hover:bg-blue-800 dark:hover:bg-blue-500 text-blue-700 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white  dark:focus:ring-blue-800"} border-blue-700 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2  hover:scale-110 transition-all ease-in-out duration-150 hover:border-cyan-600 tracking-wider hover:drop-shadow-xl  uppercase`}
           onClick={listening ? stop : listen}
         >
          {listening?"Stop listening":"listen"}
